@@ -1,0 +1,23 @@
+- name: install packages
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: install packages
+    ansible.builtin.dnf:
+      name: "{{ item }}"
+      state: latest
+    loop:
+    - mysql-server
+    - nginx
+    - postfix
+
+  - name: started packages
+    ansible.builtin.service:
+      name: "{{ item }}"
+      state: started
+      enabled: true
+    loop:
+    - mysqld
+    - nginx
+    - postfix
+    

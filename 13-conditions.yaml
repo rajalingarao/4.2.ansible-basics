@@ -1,0 +1,21 @@
+- name: check number
+  hosts: localhost
+  vars_prompt: # prompt are always considered as text/stiring
+  - name: number
+    prompt: please enter number
+    private: no
+  tasks:
+  - name: number is less than 10
+    ansible.builtin.debug:
+      msg: "Given number {{number}} is less than 10"
+    when: number | int < 10
+    
+  - name: number is greater than or equal to 10
+    ansible.builtin.debug:
+      msg: "Given number {{number}} is greater than or equal to 10"
+    when: number | int >= 10
+
+  - name: zero is equal to 0
+    ansible.builtin.debug:
+      msg: "Given number {{number}} is equal to 0"
+    when: number | int == 0

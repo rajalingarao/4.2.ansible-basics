@@ -1,0 +1,13 @@
+- name: command vs shell
+  hosts: localhost
+  tasks:
+  - name: command module
+    ansible.builtin.command: "echo 'Hi, this is from command module' > /tmp/command.txt"
+
+  - name: shell module
+    ansible.builtin.shell: "echo 'Hi, this is from shell module' > /tmp/shell.txt"
+
+# Summary:
+# command doesn't support shell features like >, so this task will fail.
+# shell supports full shell syntax, so it will succeed.
+# To write to a file, use shell or avoid redirection in command.
