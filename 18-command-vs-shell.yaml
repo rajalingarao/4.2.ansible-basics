@@ -7,7 +7,17 @@
   - name: shell module
     ansible.builtin.shell: "echo 'Hi, this is from shell module' > /tmp/shell.txt"
 
+  # How to test the command and trouble shoot it
+  - name: create file using command
+    ansible.builtin.command: touch /tmp/test.txt
+  - name: check file exists
+    ansible.builtin.command: ls -l /tmp/test.txt
+
+
 # Summary:
 # command doesn't support shell features like >, so this task will fail.
 # shell supports full shell syntax, so it will succeed.
 # To write to a file, use shell or avoid redirection in command.
+
+# We will check these in ansible agent node only, unable to see master node.
+
