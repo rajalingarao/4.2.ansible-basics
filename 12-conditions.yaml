@@ -1,5 +1,5 @@
 - name: conditions
-  hosts: frontend
+  hosts: ansible_agent
   become: yes
   tasks:
   - name: check user exists or not

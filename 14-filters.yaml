@@ -1,12 +1,12 @@
 - name: default value
-  hosts: localhost
+  hosts: ansible_agent
   tasks:
   - name: print default value
     ansible.builtin.debug:
       msg: "Hello {{course | default('Ansible') }}"
 
 - name: upper case
-  hosts: localhost
+  hosts: ansible_agent
   vars:
     greeting: "Hello, Good Morning"
   tasks:
@@ -24,7 +24,7 @@
       msg: "{{ greeting | lower }}"
 
 - name: remove duplicates
-  hosts: localhost
+  hosts: ansible_agent
   vars:
     numbers: [1,2,3,3,4,1,4,5,6]
   tasks:

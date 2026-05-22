@@ -1,5 +1,5 @@
 - name: install packages
-  hosts: frontend
+  hosts: ansible_agent
   become: yes
   tasks:
   - name: install packages

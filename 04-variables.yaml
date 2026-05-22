@@ -1,5 +1,5 @@
 - name: variables
-  hosts: localhost
+  hosts: ansible_agent
   vars:   #variable declaration at play level
     Course: "Terraform"
     Trainer: "Lingaiah"

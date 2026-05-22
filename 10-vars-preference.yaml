@@ -1,5 +1,5 @@
 - name: variable preference
-  hosts: localhost
+  hosts: ansible_agent
   # vars:
   #   WISHES: "Moring from PLAY variable"
   # vars_files:

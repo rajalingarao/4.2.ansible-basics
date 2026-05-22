@@ -1,5 +1,5 @@
 - name: variables from prompt
-  hosts: localhost
+  hosts: ansible_agent
   vars_prompt:
   - name: USERNAME
     prompt: Please enter your username

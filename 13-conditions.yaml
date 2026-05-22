@@ -1,5 +1,5 @@
 - name: check number
-  hosts: localhost
+  hosts: ansible_agent
   vars_prompt: # prompt are always considered as text/stiring
   - name: number
     prompt: please enter number

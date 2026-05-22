@@ -1,5 +1,5 @@
 - name: command vs shell
-  hosts: localhost
+  hosts: ansible_agent
   tasks:
   - name: command module
     ansible.builtin.command: "echo 'Hi, this is from command module' > /tmp/command.txt"

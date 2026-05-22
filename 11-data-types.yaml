@@ -1,5 +1,5 @@
 - name: data types
-  hosts: localhost
+  hosts: ansible_agent
   vars:
     Course: DevOps with AWS # String
     Tools: #list

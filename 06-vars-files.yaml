@@ -1,5 +1,5 @@
 - name: variables from files
-  hosts: localhost
+  hosts: ansible_agent
   vars_files:   #variable declaration at vars file
   - 06-vars.yaml
   tasks:

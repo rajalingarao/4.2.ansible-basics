@@ -1,5 +1,5 @@
 - name: install and run nginx
-  hosts: frontend
+  hosts: ansible_agent
   become: yes
   tasks:
   - name: installing nginx
