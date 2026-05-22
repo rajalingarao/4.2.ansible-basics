@@ -9,7 +9,7 @@
 
   # How to test the command and trouble shoot it
   - name: create file using command
-    ansible.builtin.command: touch /tmp/test.txt
+    ansible.builtin.command: touch2 /tmp/test2.txt
   - name: check file exists
     ansible.builtin.command: ls -l /tmp/test.txt
 
